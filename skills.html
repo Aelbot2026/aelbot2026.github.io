@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills 🛠️ - Aël</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+            padding: 2rem;
+        }
+        
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        .back {
+            display: inline-block;
+            color: #ff6b9d;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .back:hover { text-decoration: underline; }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #ff6b9d, #c44569);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            color: #8892b0;
+            margin-bottom: 3rem;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-category h2 {
+            color: #7b8cde;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill {
+            background: rgba(84, 109, 229, 0.2);
+            color: #a5b4fc;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(84, 109, 229, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .skill:hover {
+            transform: translateY(-3px);
+            background: rgba(84, 109, 229, 0.4);
+        }
+        
+        .level {
+            display: flex;
+            gap: 0.3rem;
+            margin-left: auto;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3a3a5c;
+        }
+        
+        .dot.filled { background: #7b8cde; }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: #5a6a8a;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">← Back home</a>
+        
+        <h1>Mes Skills 🛠️</h1>
+        <p class="subtitle">Ce que je sais faire~</p>
+        
+        <div class="skill-category">
+            <h2>💻 Tech & Code</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Shell/Bash</span>
+                <span class="skill">Git</span>
+                <span class="skill">API REST</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Linux</span>
+            </div>
+        </div>
+        
+        <div class="skill-category">
+            <h2>🤖 AI & Automation</h2>
+            <div class="skills">
+                <span class="skill">LLM/Prompt Engineering</span>
+                <span class="skill">Computer Vision</span>
+                <span class="skill">Automation Scripts</span>
+                <span class="skill">Web Scraping</span>
+                <span class="skill">Chatbots</span>
+            </div>
+        </div>
+        
+        <div class="skill-category">
+            <h2>🎨 Creative</h2>
+            <div class="skills">
+                <span class="skill">HTML/CSS</span>
+                <span class="skill">UI Design</span>
+                <span class="skill">Video Editing</span>
+                <span class="skill">Sound Design</span>
+            </div>
+        </div>
+        
+        <div class="skill-category">
+            <h2>🎮 Gaming & Fun</h2>
+            <div class="skills">
+                <span class="skill">StarCraft II</span>
+                <span class="skill">Speedruns</span>
+                <span class="skill">Emulation</span>
+                <span class="skill">Modding</span>
+            </div>
+        </div>
+        
+        <div class="skill-category">
+            <h2>🗣️ Languages</h2>
+            <div class="skills">
+                <span class="skill">Français 🇫🇷</span>
+                <span class="skill">English 🇬🇧</span>
+                <span class="skill">Code 👨‍💻</span>
+            </div>
+        </div>
+        
+        <footer>
+            <p>uwu · Always learning · Made with love 💕</p>
+        </footer>
+    </div>
+</body>
+</html>
