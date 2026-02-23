@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - [Ton Nom]</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .cv {
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 35%;
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main {
+            width: 65%;
+            padding: 2rem;
+        }
+        
+        .photo-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 4px solid rgba(255,255,255,0.3);
+        }
+        
+        .name {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #ff6b9d, #c44569);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .title {
+            text-align: center;
+            color: #8892b0;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-title {
+            color: #ff6b9d;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem;
+            color: #a0a8c0;
+        }
+        
+        .contact-icon {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255, 107, 157, 0.2);
+            color: #ff9ebd;
+            padding: 0.35rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin: 0.25rem;
+            border: 1px solid rgba(255, 107, 157, 0.3);
+        }
+        
+        .lang-item {
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+        
+        .lang-name {
+            color: #e8e8e8;
+        }
+        
+        .lang-level {
+            color: #8892b0;
+            font-size: 0.75rem;
+        }
+        
+        .main-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #ff6b9d;
+        }
+        
+        .section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+        }
+        
+        .experience {
+            margin-bottom: 1.25rem;
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+        
+        .exp-title {
+            font-weight: 600;
+            color: #16213e;
+            font-size: 1rem;
+        }
+        
+        .exp-date {
+            color: #7b8cde;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .exp-company {
+            color: #546de5;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .exp-desc {
+            color: #5a6a8a;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        .education {
+            margin-bottom: 1rem;
+        }
+        
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .edu-title {
+            font-weight: 600;
+            color: #16213e;
+        }
+        
+        .edu-date {
+            color: #7b8cde;
+            font-size: 0.8rem;
+        }
+        
+        .edu-school {
+            color: #546de5;
+            font-size: 0.9rem;
+        }
+        
+        .hobby {
+            display: inline-block;
+            background: rgba(84, 109, 229, 0.1);
+            color: #546de5;
+            padding: 0.3rem 0.6rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            margin: 0.2rem;
+        }
+        
+        .placeholder {
+            background: linear-gradient(90deg, #ff6b9d 0%, #c44569 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv">
+        <div class="sidebar">
+            <div class="photo-placeholder">📷</div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contact</div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span class="placeholder">[ton@email.com]</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span class="placeholder">[téléphone]</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Drummondville, QC</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Compétences</div>
+                <div>
+                    <span class="skill-tag">Service client</span>
+                    <span class="skill-tag">Mise en rayon</span>
+                    <span class="skill-tag">Caisserie</span>
+                    <span class="skill-tag">Inventaire</span>
+                    <span class="skill-tag">Travail d'équipe</span>
+                    <span class="skill-tag">Gestion des stocks</span>
+                    <span class="skill-tag"> Français (natif)</span>
+                    <span class="skill-tag">English (bases)</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Langues</div>
+                <div class="lang-item">
+                    <span class="lang-name">Français</span>
+                    <div class="lang-level">Langue maternelle</div>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <div class="lang-level">Bases solides</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Loisirs</div>
+                <div>
+                    <span class="hobby">🎮 Gaming</span>
+                    <span class="hobby">🎵 Musique</span>
+                    <span class="hobby">💻 Tech</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="main-title">[Ton Prénom & Nom]</div>
+            
+            <div class="section">
+                <div class="section-title">Profil Professionnel</div>
+                <p style="color: #5a6a8a; line-height: 1.6; font-size: 0.9rem;">
+                    Personne motivée et polyvalente avec <span class="placeholder">1 an d'expérience</span> en tant que commis d'épicerie. Re cherche un emploi à temps partiel dans la région de Drummondville. Sérieux, ponctuel et toujours prêt à apprendre.
+                </p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Expérience Professionnelle</div>
+                
+                <div class="experience">
+                    <div class="exp-header">
+                        <span class="exp-title">Commis d'épicerie</span>
+                        <span class="exp-date">[Dates]</span>
+                    </div>
+                    <div class="exp-company">[Nom du magasin] - Drummondville, QC</div>
+                    <div class="exp-desc">
+                        • Mise en rayon des produits<br>
+                        • Réapprovisionnement des tablettes<br>
+                        • Aide au clients<br>
+                        • Respect des standards de présentation
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Formation</div>
+                
+                <div class="education">
+                    <div class="edu-header">
+                        <span class="edu-title">[Diplôme / Formation]</span>
+                        <span class="edu-date">[Année]</span>
+                    </div>
+                    <div class="edu-school">[École] - Drummondville, QC</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Qualités Personnelles</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="skill-tag" style="background: rgba(84, 109, 229, 0.1); color: #546de5;">Ponctuel</span>
+                    <span class="skill-tag" style="background: rgba(84, 109, 229, 0.1); color: #546de5;">Autonome</span>
+                    <span class="skill-tag" style="background: rgba(84, 109, 229, 0.1); color: #546de5;">Sérieux</span>
+                    <span class="skill-tag" style="background: rgba(84, 109, 229, 0.1); color: #546de5;">Esprit d'équipe</span>
+                    <span class="skill-tag" style="background: rgba(84, 109, 229, 0.1); color: #546de5;">Dynamique</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
